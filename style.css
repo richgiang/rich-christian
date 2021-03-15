@@ -1,0 +1,39 @@
+.header-menu-flex {
+    display: flex;
+}
+
+h1 {
+    font-family: MonumentExtendedUltralight;
+    font-size: 200px;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.menu {
+    font-family: SupplyRegular;
+}
+
+
+.footer {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 100%;
+    font-family: SupplyRegular;
+}
+@font-face {
+    font-family: MonumentExtendedRegular;
+    src: url(assets/monumentextended-regular-webfont.woff2)
+}
+@font-face {
+    font-family: MonumentExtendedUltralight;
+    src: url(assets/monumentextended-ultralight-webfont.woff2)
+}
+@font-face {
+    font-family: SupplyRegular;
+    src: url(assets/supply-regular-webfont.woff2)
+}
