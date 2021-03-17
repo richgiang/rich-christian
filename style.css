@@ -13,6 +13,10 @@ a {
     text-decoration: none;
     color: black;
 }
+.menu a:hover{
+    background-color: black;
+    color: white;
+}
 .menu {
     font-family: SupplyRegular;
 }
