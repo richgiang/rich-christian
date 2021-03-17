@@ -1,21 +1,40 @@
 .header-menu-flex {
     display: flex;
 }
-
 h1 {
     font-family: MonumentExtendedUltralight;
     font-size: 200px;
     border: 0px;
     margin: 0px;
     padding: 0px;
+    -webkit-animation: typing 7s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
 }
 a {
     text-decoration: none;
     color: black;
 }
+.menu a:hover{
+    background-color: black;
+    color: white;
+}
 .menu {
     font-family: SupplyRegular;
 }
+
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+h1 { 
+	border-right: .1em solid black;
+	width: 16.5em; 
+	width: 21ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	
+}
+
 
 
 .footer {
