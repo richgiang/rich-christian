@@ -1,6 +1,12 @@
 .header-menu-flex {
     display: flex;
 }
+#badcity-bg {
+    background-color: black;
+}
+#badcity-link {
+    color: white;
+}
 h1 {
     font-family: MonumentExtendedUltralight;
     font-size: 200px;
