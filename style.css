@@ -1,16 +1,91 @@
 .header-menu-flex {
     display: flex;
+    flex-direction: row;
 }
-h1 {
+
+.typing {
+    position: relative;
+    padding-top: 2vh;
+    padding: 0;
+  }
+  .typing::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: black;
+    background: white;
+    -webkit-animation: typing 2.5s steps(8) forwards, caret .75s infinite;
+        animation: typing 2.5s steps(8) forwards, caret .75s infinite;
+    padding: 0;
+  }
+
+
+@-webkit-keyframes typing {
+    to {
+      width: 0;
+    }
+  }
+@keyframes typing {
+    to {
+      width: 0;
+    }
+  }
+  @-webkit-keyframes caret {
+    50% {
+      color: transparent;
+    }
+  }
+  @keyframes caret {
+    50% {
+      color: transparent;
+    }
+  }
+
+h1 { 
     font-family: MonumentExtendedUltralight;
-    font-size: 200px;
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-    -webkit-animation: typing 7s steps(21, end),
-	           blink-caret .5s step-end infinite alternate;
+    font-size: 150px;
+    letter-spacing: 45px;
+    position: relative;
+    color: white;
+    padding-left: 20px;
 }
-a {
+
+.head a::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+.head a:hover{
+    color: white;
+}
+  
+ .head a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+ .head a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: black;
+    z-index: -1;
+    transition: transform .5s ease;
+  }
+
+.head{
+    padding: 0;
+}
+.head  a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.menu a {
     text-decoration: none;
     color: black;
 }
@@ -18,22 +93,20 @@ a {
     background-color: black;
     color: white;
 }
+
+.menu-flex{
+    display: flex;
+    flex-direction: row;
+}
 .menu {
     font-family: SupplyRegular;
+    justify-self: flex-end;
+    padding-top: 2vh;
+    position: absolute;
 }
 
 
-@-webkit-keyframes typing { from { width: 0; } }
-@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
-h1 { 
-	border-right: .1em solid black;
-	width: 16.5em; 
-	width: 21ch;
-	margin: 2em 1em;
-	white-space: nowrap;
-	overflow: hidden;
-	
-}
+
 
 
 
