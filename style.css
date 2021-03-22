@@ -1,6 +1,21 @@
 .header-menu-flex {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: MonumentExtendedRegular;
+    src: url(assets/monumentextended-regular-webfont.woff2)
+}
+@font-face {
+    font-family: MonumentExtendedUltralight;
+    src: url(assets/monumentextended-ultralight-webfont.woff2)
+}
+@font-face {
+    font-family: SupplyRegular;
+    src: url(assets/supply-regular-webfont.woff2)
 }
 
 .typing {
@@ -42,7 +57,7 @@
     }
   }
 
-h1 { 
+.head h1 { 
     font-family: MonumentExtendedUltralight;
     font-size: 150px;
     letter-spacing: 45px;
@@ -96,19 +111,190 @@ h1 {
 
 .menu-flex{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .menu {
     font-family: SupplyRegular;
     justify-self: flex-end;
     padding-top: 2vh;
     position: absolute;
+    padding-left: 75%;
 }
 
+.darkmenu a {
+    text-decoration: none;
+    color: white;
+}
+.darkmenu a:hover{
+    background-color: white;
+    color: black;
+}
 
+.darkmenu-flex{
+    display: flex;
+    flex-direction: column;
+}
+.darkmenu {
+    font-family: SupplyRegular;
+    justify-self: flex-end;
+    padding-top: 2vh;
+    position: absolute;
+    padding-left: 78%;
+}
 
+/* glitch effect */
 
+.glitch {
+    position: absolute;
+    color: black;
+    font-size: 4rem;
+    text-decoration: none;
+    font-family: MonumentExtendedUltralight;
+    padding-left: 2vw;
+  }
+  .glitch:before, .glitch:after {
+    content: "GOODCITY";
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 2vw;
+  }
+  .glitch:before {
+    color: #0ff;
+    z-index: -1;
+  }
+  .glitch:after {
+    color: #f0f;
+    z-index: -2;
+  }
+  .glitch:hover:before {
+    animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+  .glitch:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  }
+  
+  @keyframes glitch {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+      transform: translate(-5px, 5px);
+      transform: skewX(10deg);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+      transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+      transform: translate(5px, -5px);
+    }
+    to {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+  }
 
+  .glitch1 {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    text-decoration: none;
+    font-family: MonumentExtendedUltralight;
+    padding-left: 2vw;
+  }
+  .glitch1:before, .glitch1:after {
+    content: "BADCITY";
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 2vw;
+  }
+  .glitch1:before {
+    color: #0ff;
+    z-index: -1;
+  }
+  .glitch1:after {
+    color: #f0f;
+    z-index: -2;
+  }
+  .glitch1:hover:before {
+    animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+  .glitch1:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  }
+  
+  @keyframes glitch1 {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+      transform: translate(-5px, 5px);
+      transform: skewX(10deg);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+      transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+      transform: translate(5px, -5px);
+    }
+    to {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+  }
+
+/* MAP ANIMATION */
+
+.dark {
+    background-color: #000;
+  }
+
+.light{
+    background-color: white;
+}
+  
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100;
+  }
+  
+  .svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: .8;
+  }
+
+  .svg1 {
+    display: block;
+    width: 100%;
+    height:  auto;
+    opacity: .8;
+  }
 
 .footer {
     position: fixed;
@@ -116,16 +302,4 @@ h1 {
     bottom: 20px;
     width: 100%;
     font-family: SupplyRegular;
-}
-@font-face {
-    font-family: MonumentExtendedRegular;
-    src: url(assets/monumentextended-regular-webfont.woff2)
-}
-@font-face {
-    font-family: MonumentExtendedUltralight;
-    src: url(assets/monumentextended-ultralight-webfont.woff2)
-}
-@font-face {
-    font-family: SupplyRegular;
-    src: url(assets/supply-regular-webfont.woff2)
 }
