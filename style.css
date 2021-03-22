@@ -430,10 +430,6 @@ html, body{
 
 /* slide out  */
 
-body {
-    background: tan;
-    overflow-x: hidden
-}
 
 .mask {
     display: none;
