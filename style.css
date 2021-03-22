@@ -1,3 +1,7 @@
+html, body{
+    cursor: crosshair;
+}
+
 .header-menu-flex {
     display: flex;
     flex-direction: column;
@@ -107,6 +111,7 @@
 .menu a:hover{
     background-color: black;
     color: white;
+    cursor: crosshair;
 }
 
 .menu-flex{
@@ -118,7 +123,7 @@
     justify-self: flex-end;
     padding-top: 2vh;
     position: absolute;
-    padding-left: 75%;
+    padding-left: 78%;
 }
 
 .darkmenu a {
@@ -295,6 +300,110 @@
     height:  auto;
     opacity: .8;
   }
+
+
+/* Styling for static pages */
+
+.static-body{
+    margin: 0%;
+    padding: 0%;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: left;
+}
+
+.flex h1{
+    font-family: MonumentExtendedRegular;
+    font-size: 3rem;
+}
+
+.flex p{
+    font-family: SupplyRegular;
+    font-size: 1rem;
+}
+
+.home{
+    font-family: MonumentExtendedRegular;
+
+}
+
+.home-glitch {
+    position: absolute;
+    color: black;
+    font-size: 20rem;
+    text-decoration: none;
+    font-family: MonumentExtendedUltralight;
+    opacity: .2;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .home-glitch:before, .home-glitch:after {
+    content: "TopoCity";
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .home-glitch:before {
+    color: #0ff;
+    z-index: -1;
+    opacity: 1;
+  }
+  .home-glitch:after {
+    color: #f0f;
+    z-index: -2;
+    opacity: 100%;
+  }
+  .home-glitch:hover{
+      cursor: crosshair;
+  }
+  .home-glitch:hover:before {
+    animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+  .home-glitch:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  }
+  
+  @keyframes home-glitch {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+      transform: translate(-5px, 5px);
+      transform: skewX(10deg);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+      transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+      transform: translate(5px, -5px);
+    }
+    to {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+  }
+
+/* footer */
 
 .footer {
     position: fixed;
