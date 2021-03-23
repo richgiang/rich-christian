@@ -286,6 +286,7 @@ html, body{
     height: 100%;
     overflow: hidden;
     z-index: -100;
+    position: absolute;
   }
   
   .svg {
@@ -439,41 +440,69 @@ html, body{
     z-index: 100;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .slideout {
     position: fixed;
     z-index: 1000;
     background-color: #fff;
-    overflow: hidden;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    /* overflow: hidden; */
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all .5s;
+    transition: all 0.5s;
+    overflow-y: scroll;
 }
 
 .slide-menu-right {
     right: -50%;
     top: 0;
     width: 50%;
-    height: 100%;
+    height: auto;
+    z-index: 99999;
+}
+
+.slide-menu-flex{
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    overflow-y: scroll;
 }
 
 
 button.close-menu{
-    color: #fff;
-    background: black;
+    font-family: SupplyRegular;
+    color: #000;
+    background: none;
     border: 1px solid grey;
-    border-radius: 5px;
+    border-radius: 30px;
     display: block;
     margin: 40px auto;
     width: 100px;
 }
+button.close-menu:hover{
+    background-color: black;
+    color: white;
+}
 
 body.smr-open .slide-menu-right {
     right: 0
+}
+
+.heading{
+    font-size: 3rem;
+    font-family: MonumentExtendedUltralight;
+    padding-bottom: 2vh;
+}
+.body-text{
+    font-size: 1rem;
+    font-family: SupplyRegular;
 }
 
 /* footer */

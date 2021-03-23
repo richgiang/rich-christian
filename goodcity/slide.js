@@ -25,5 +25,10 @@ function changePickupStoreMenu(){
         activeNav = "";
         $('.mask').fadeOut();
     });
+    $(document).on('click', ".mask", function(el,i){
+        $('body').removeClass(activeNav);
+        activeNav = "";
+        $('.mask').fadeOut();
+    });
  
 }
