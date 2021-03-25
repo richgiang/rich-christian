@@ -417,18 +417,26 @@ html, body{
     position: absolute;
     z-index: -1;
 }
-.mountain{
+#mountain{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
 }
-.mountain svg{
+#tent{
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.icon svg{
     transition: .5s ease;
 }
-.mountain svg:hover{
-    transform: rotate(-10deg) scale(1.2);
+.icon svg:hover{
+     transform: rotate(-10deg) scale(1.2);
 }
+
+
 
 /* slide out  */
 
@@ -480,28 +488,25 @@ html, body{
 
 
 button.close-menu{
+  display: flex;
     font-family: SupplyRegular;
     color: #000;
     background: none;
     border: 1px solid grey;
     border-radius: 30px;
-    display: block;
     margin: 40px auto;
     width: 100px;
+    justify-content: center;
 }
 button.close-menu:hover{
     background-color: black;
     color: white;
 }
 
-body.smr-open .slide-menu-right {
-    right: 0
-}
-
 .heading{
     font-size: 3rem;
     font-family: MonumentExtendedUltralight;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
 }
 .body-text{
     font-size: 1rem;
