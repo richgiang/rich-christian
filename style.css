@@ -482,7 +482,7 @@ html, body{
     top: 30%;
     left: 50%;
     transform: translate(-50%);
-    overflow-y: overlay;
+    overflow-y: scroll;
     height: 100vh;
 }
 
@@ -511,6 +511,7 @@ button.close-menu:hover{
 .body-text{
     font-size: 1rem;
     font-family: SupplyRegular;
+    height: 100vh;
 }
 
 /* footer */
