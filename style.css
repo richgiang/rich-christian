@@ -276,6 +276,7 @@ html, body{
 
 .light{
     background-color: white;
+    overflow: hidden;
 }
   
   .container {
@@ -462,6 +463,7 @@ html, body{
     width: 50%;
     height: auto;
     z-index: 99999;
+    overflow: hidden;
 }
 
 .slide-menu-flex{
@@ -472,7 +474,8 @@ html, body{
     top: 30%;
     left: 50%;
     transform: translate(-50%);
-    overflow-y: scroll;
+    overflow-y: overlay;
+    height: 100vh;
 }
 
 
