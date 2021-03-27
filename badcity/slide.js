@@ -1,5 +1,6 @@
 // Slide out
 
+
 changePickupStoreMenu();
 
 function assignSlideoutToTrigger(trigger, slideoutSelector){
@@ -31,25 +32,24 @@ function changePickupStoreMenu(){
     mask = $('<div class="mask"></div>');
     $('body').append(mask);
 
+    // ICON/TRIGGER
+    var blackMountain = document.querySelector("#black-mountain"),
+    blackTent = document.querySelector("#black-tent"),
+    blackRiver = document.querySelector("#black-river");
+    
+    // SLIDEOUTs
+    var educationAttainment = "#education-attainment",
+    blackPeople =  "#black-people",
+    whitePeople =  "#white-people";
+ 
 
-        // ICON/TRIGGER
-        var tent = document.querySelector("#tent"),
-        mountain = document.querySelector("#mountain"),
-        river = document.querySelector("#river");
-        
-        // SLIDEOUTs
-        var celebrateOne =  "#celebrate-one",
-        publicPlaces =  "#public-places",
-        unemployment =  "#unemployment";
-     
-    
-        /* slide menu right */
-        assignSlideoutToTrigger(tent, celebrateOne);
-        assignSlideoutToTrigger(mountain, publicPlaces);
-        assignSlideoutToTrigger(river, unemployment);
-    
-    
-        var allSlideouts = [celebrateOne, publicPlaces, unemployment]
+    /* slide menu right */
+    assignSlideoutToTrigger(blackMountain, educationAttainment);
+    assignSlideoutToTrigger(blackTent, blackPeople);
+    assignSlideoutToTrigger(blackRiver, whitePeople);
+
+
+    var allSlideouts = [blackPeople, educationAttainment, whitePeople]
 
     addHidingAbilityToSlideout(allSlideouts)
     /* hide active menu if close menu button is clicked */

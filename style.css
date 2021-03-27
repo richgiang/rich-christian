@@ -429,6 +429,30 @@ html, body{
   grid-row-start: 2;
   grid-row-end: 3;
 }
+#river{
+  grid-column-start: 3;
+  grid-column-end : 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+#black-mountain{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+#black-tent{
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#black-river{
+  grid-column-start: 3;
+  grid-column-end : 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
 .icon svg{
     transition: .5s ease;
 }
