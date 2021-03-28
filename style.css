@@ -537,6 +537,22 @@ button.close-menu:hover{
     font-family: SupplyRegular;
     height: 100vh;
 }
+.heading-black{
+    font-size: 3rem;
+    font-family: MonumentExtendedUltralight;
+    padding-bottom: 1vh;
+    color: white;
+}
+.body-text-black{
+    font-size: 1rem;
+    font-family: SupplyRegular;
+    height: 100vh;
+    color: white;
+}
+
+/* glitch effect */
+
+
 
 /* footer */
 
