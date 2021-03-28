@@ -11,7 +11,7 @@ function assignSlideoutToTrigger(trigger, slideoutSelector){
 }
 
 function addHidingAbilityToSlideout(listOfSlideouts){
-    $(document).on('click', ".close-menu", function(el,i){
+    $(document).on('click', ".close-menu-black", function(el,i){
         for (var i=0; i < listOfSlideouts.length; i++){
             $(listOfSlideouts[i]).css("right", "-50%");
         }

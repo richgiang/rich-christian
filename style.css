@@ -22,10 +22,11 @@ html, body{
     src: url(assets/supply-regular-webfont.woff2)
 }
 
-.typing {
+/* .typing {
     position: relative;
     padding-top: 2vh;
     padding: 0;
+    width: 80%;
   }
   .typing::after {
     content: "|";
@@ -34,12 +35,12 @@ html, body{
     width: 100%;
     color: black;
     background: white;
-    -webkit-animation: typing 2.5s steps(8) forwards, caret .75s infinite;
-        animation: typing 2.5s steps(8) forwards, caret .75s infinite;
+    -webkit-animation: typing 2.5s steps(7) forwards, caret .75s infinite;
+        animation: typing 2.5s steps(7) forwards, caret .75s infinite;
     padding: 0;
-  }
+  } */
 
-
+/* 
 @-webkit-keyframes typing {
     to {
       width: 0;
@@ -59,11 +60,11 @@ html, body{
     50% {
       color: transparent;
     }
-  }
+  } */
 
 .head h1 { 
     font-family: MonumentExtendedUltralight;
-    font-size: 150px;
+    font-size: 8rem;
     letter-spacing: 45px;
     position: relative;
     color: white;
@@ -77,6 +78,9 @@ html, body{
 
 .head a:hover{
     color: white;
+}
+.head{
+  width: 100%;
 }
   
  .head a:hover::before {
@@ -140,6 +144,16 @@ html, body{
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 1500px){
+  .darkmenu-flex{
+    flex-direction: row;
+  }
+  .darkmenu{
+    padding-left: 80%;
+  }
+}
+
 .darkmenu {
     font-family: SupplyRegular;
     justify-self: flex-end;
@@ -343,16 +357,16 @@ html, body{
 .home-glitch {
     position: absolute;
     color: black;
-    font-size: 18rem;
+    font-size: 16rem;
     text-decoration: none;
     font-family: MonumentExtendedUltralight;
     opacity: .2;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .home-glitch:before, .home-glitch:after {
-    content: "TopoCity";
+    content: "TwoCities";
     opacity: 1;
     position: absolute;
     top: 0;
@@ -410,12 +424,14 @@ html, body{
 
 .white-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     z-index: -1;
+    justify-content: center;
+    align-items: center;
 }
 #mountain{
     grid-column-start: 2;
@@ -424,16 +440,16 @@ html, body{
     grid-row-end: 4;
 }
 #tent{
-  grid-column-start: 5;
-  grid-column-end: 6;
+  grid-column-start: 9;
+  grid-column-end: 10;
   grid-row-start: 2;
   grid-row-end: 3;
 }
 #river{
-  grid-column-start: 3;
-  grid-column-end : 4;
-  grid-row-start: 5;
-  grid-row-end: 6;
+  grid-column-start: 5;
+  grid-column-end : 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 #black-mountain{
     grid-column-start: 2;
@@ -442,16 +458,16 @@ html, body{
     grid-row-end: 4;
 }
 #black-tent{
-  grid-column-start: 5;
-  grid-column-end: 6;
+  grid-column-start: 9;
+  grid-column-end: 10;
   grid-row-start: 2;
   grid-row-end: 3;
 }
 #black-river{
-  grid-column-start: 3;
-  grid-column-end : 4;
-  grid-row-start: 5;
-  grid-row-end: 6;
+  grid-column-start: 5;
+  grid-column-end : 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 .icon svg{
     transition: .5s ease;
@@ -480,6 +496,18 @@ html, body{
     position: fixed;
     z-index: 1000;
     background-color: #fff;
+    /* overflow: hidden; */
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all .5s;
+    transition: all 0.5s;
+    overflow-y: scroll;
+}
+.slideout-black {
+    position: fixed;
+    z-index: 1000;
+    background-color: #000;
     /* overflow: hidden; */
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -525,6 +553,21 @@ button.close-menu{
 button.close-menu:hover{
     background-color: black;
     color: white;
+}
+button.close-menu-black{
+  display: flex;
+    font-family: SupplyRegular;
+    color: #fff;
+    background: none;
+    border: 1px solid grey;
+    border-radius: 30px;
+    margin: 40px auto;
+    width: 100px;
+    justify-content: center;
+}
+button.close-menu-black:hover{
+    background-color: white;
+    color: black;
 }
 
 .heading{
