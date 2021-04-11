@@ -1,0 +1,608 @@
+html, body{
+    cursor: crosshair;
+}
+
+.header-menu-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: MonumentExtendedRegular;
+    src: url(assets/monumentextended-regular-webfont.woff2)
+}
+@font-face {
+    font-family: MonumentExtendedUltralight;
+    src: url(assets/monumentextended-ultralight-webfont.woff2)
+}
+@font-face {
+    font-family: SupplyRegular;
+    src: url(assets/supply-regular-webfont.woff2)
+}
+
+/* .typing {
+    position: relative;
+    padding-top: 2vh;
+    padding: 0;
+    width: 80%;
+  }
+  .typing::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: black;
+    background: white;
+    -webkit-animation: typing 2.5s steps(7) forwards, caret .75s infinite;
+        animation: typing 2.5s steps(7) forwards, caret .75s infinite;
+    padding: 0;
+  } */
+
+/* 
+@-webkit-keyframes typing {
+    to {
+      width: 0;
+    }
+  }
+@keyframes typing {
+    to {
+      width: 0;
+    }
+  }
+  @-webkit-keyframes caret {
+    50% {
+      color: transparent;
+    }
+  }
+  @keyframes caret {
+    50% {
+      color: transparent;
+    }
+  } */
+
+.head h1 { 
+    font-family: MonumentExtendedUltralight;
+    font-size: 8rem;
+    letter-spacing: 45px;
+    position: relative;
+    color: white;
+    padding-left: 20px;
+}
+
+.head a::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+.head a:hover{
+    color: white;
+}
+.head{
+  width: 100%;
+}
+  
+ .head a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+ .head a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: black;
+    z-index: -1;
+    transition: transform .5s ease;
+  }
+
+.head{
+    padding: 0;
+}
+.head  a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+.menu a:hover{
+    background-color: black;
+    color: white;
+    cursor: crosshair;
+}
+
+.menu-flex{
+    display: flex;
+    flex-direction: column;
+}
+.menu {
+    font-family: SupplyRegular;
+    justify-self: flex-end;
+    padding-top: 2vh;
+    position: absolute;
+    padding-left: 78%;
+    z-index: 10001;
+}
+
+.darkmenu a {
+    text-decoration: none;
+    color: white;
+}
+.darkmenu a:hover{
+    background-color: white;
+    color: black;
+}
+
+.darkmenu-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1500px){
+  .darkmenu-flex{
+    flex-direction: row;
+  }
+  .darkmenu{
+    padding-left: 80%;
+  }
+}
+
+.darkmenu {
+    font-family: SupplyRegular;
+    justify-self: flex-end;
+    padding-top: 2vh;
+    position: absolute;
+    padding-left: 78%;
+}
+
+/* glitch effect */
+
+.glitch {
+    position: absolute;
+    color: black;
+    font-size: 4rem;
+    text-decoration: none;
+    font-family: MonumentExtendedUltralight;
+    padding-left: 2vw;
+  }
+  .glitch:before, .glitch:after {
+    content: "GOODCITY";
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 2vw;
+  }
+  .glitch:before {
+    color: #0ff;
+    z-index: -1;
+  }
+  .glitch:after {
+    color: #f0f;
+    z-index: -2;
+  }
+  .glitch:hover:before {
+    animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+  .glitch:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  }
+  
+  @keyframes glitch {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+      transform: translate(-5px, 5px);
+      transform: skewX(10deg);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+      transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+      transform: translate(5px, -5px);
+    }
+    to {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+  }
+
+  .glitch1 {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    text-decoration: none;
+    font-family: MonumentExtendedUltralight;
+    padding-left: 2vw;
+  }
+  .glitch1:before, .glitch1:after {
+    content: "BADCITY";
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 2vw;
+  }
+  .glitch1:before {
+    color: #0ff;
+    z-index: -1;
+  }
+  .glitch1:after {
+    color: #f0f;
+    z-index: -2;
+  }
+  .glitch1:hover:before {
+    animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+  .glitch1:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  }
+  
+  @keyframes glitch1 {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+      transform: translate(-5px, 5px);
+      transform: skewX(10deg);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+      transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+      transform: translate(5px, -5px);
+    }
+    to {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+  }
+
+/* MAP ANIMATION */
+
+.dark {
+    background-color: #000;
+  }
+
+.light{
+    background-color: white;
+    overflow: hidden;
+}
+  
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100;
+    position: absolute;
+  }
+  
+  .svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: .8;
+  }
+
+  .svg1 {
+    display: block;
+    width: 100%;
+    height:  auto;
+    opacity: .8;
+  }
+
+
+/* Styling for static pages */
+
+.static-body{
+    margin: 0%;
+    padding: 0%;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: left;
+}
+
+.flex h1{
+    font-family: MonumentExtendedRegular;
+    font-size: 3rem;
+}
+
+.flex p{
+    font-family: SupplyRegular;
+    font-size: 1rem;
+}
+
+.home{
+    font-family: MonumentExtendedRegular;
+
+}
+
+.home-glitch {
+    position: absolute;
+    color: black;
+    font-size: 16rem;
+    text-decoration: none;
+    font-family: MonumentExtendedUltralight;
+    opacity: .2;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .home-glitch:before, .home-glitch:after {
+    content: "TwoCities";
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .home-glitch:before {
+    color: #0ff;
+    z-index: -1;
+    opacity: 1;
+  }
+  .home-glitch:after {
+    color: #f0f;
+    z-index: -2;
+    opacity: 100%;
+  }
+  .home-glitch:hover{
+      cursor: crosshair;
+  }
+  .home-glitch:hover:before {
+    animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+  .home-glitch:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  }
+  
+  @keyframes home-glitch {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+      transform: translate(-5px, 5px);
+      transform: skewX(10deg);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+      transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+      transform: translate(5px, -5px);
+    }
+    to {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+  }
+
+/* icon grid */
+
+.white-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+}
+#mountain{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+#tent{
+  grid-column-start: 9;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#river{
+  grid-column-start: 5;
+  grid-column-end : 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+#black-mountain{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+#black-tent{
+  grid-column-start: 9;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#black-river{
+  grid-column-start: 5;
+  grid-column-end : 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.icon svg{
+    transition: .5s ease;
+}
+.icon svg:hover{
+     transform: rotate(-10deg) scale(1.2);
+}
+
+
+
+/* slide out  */
+
+
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.slideout {
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+    /* overflow: hidden; */
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all .5s;
+    transition: all 0.5s;
+    overflow-y: scroll;
+}
+.slideout-black {
+    position: fixed;
+    z-index: 1000;
+    background-color: #000;
+    /* overflow: hidden; */
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all .5s;
+    transition: all 0.5s;
+    overflow-y: scroll;
+}
+
+.slide-menu-right {
+    right: -50%;
+    top: 0;
+    width: 50%;
+    height: auto;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.slide-menu-flex{
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+
+button.close-menu{
+  display: flex;
+    font-family: SupplyRegular;
+    color: #000;
+    background: none;
+    border: 1px solid grey;
+    border-radius: 30px;
+    margin: 40px auto;
+    width: 100px;
+    justify-content: center;
+}
+button.close-menu:hover{
+    background-color: black;
+    color: white;
+}
+button.close-menu-black{
+  display: flex;
+    font-family: SupplyRegular;
+    color: #fff;
+    background: none;
+    border: 1px solid grey;
+    border-radius: 30px;
+    margin: 40px auto;
+    width: 100px;
+    justify-content: center;
+}
+button.close-menu-black:hover{
+    background-color: white;
+    color: black;
+}
+
+.heading{
+    font-size: 3rem;
+    font-family: MonumentExtendedUltralight;
+    padding-bottom: 1vh;
+}
+.body-text{
+    font-size: 1rem;
+    font-family: SupplyRegular;
+    height: 100vh;
+}
+.heading-black{
+    font-size: 3rem;
+    font-family: MonumentExtendedUltralight;
+    padding-bottom: 1vh;
+    color: white;
+}
+.body-text-black{
+    font-size: 1rem;
+    font-family: SupplyRegular;
+    height: 100vh;
+    color: white;
+}
+
+/* glitch effect */
+
+
+
+/* footer */
+
+.footer {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 100%;
+    font-family: SupplyRegular;
+}
