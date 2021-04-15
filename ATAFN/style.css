@@ -34,21 +34,68 @@ hr{
     height: 5%;
     box-shadow: 0px 0px 2px rgb(184, 184, 184);
     font-family: Body;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    padding-top: 0;
+    padding-bottom: 7px;
+}
+.menu img{
+  height: 60%;
+  width: 60%;
+  object-fit: contain;
+  padding: 0;
+}
+.menu div{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 90%;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #main-icon:hover{
     background-color: gray;
     opacity: 20%;
     border-radius: 10px;
+    z-index: -100;
 }
 
 .logo{ 
     grid-column-start: 1;
     grid-column-end: 2;
 }
+.logo img{
+  width: 100%;
+  padding-left: 7%;
+}
 .search{
     grid-column-start: 2;
     grid-column-end: 4;
+}
+.search button{
+  text-decoration: none;
+  background-color: rgb(233, 233, 233);
+  color: rgb(120, 120, 120);
+  padding: 10px;
+  border: none;
+  font-family: Body;
+  width: 250px;
+  border-radius: 30px;
+  text-align: left;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 13.5%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .home{
@@ -124,6 +171,7 @@ hr{
     flex-direction: row;
     align-items: flex-start;
     width: 95%;
+    align-items: center;
   }
   .author-photo{
     width: 10%;
