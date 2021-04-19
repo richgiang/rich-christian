@@ -1,4 +1,4 @@
-$(document).ready(function(){
+function animationFunction(){
     animateDiv('.logo');
     animateDiv('.search');
     animateDiv('.watch');
@@ -11,7 +11,7 @@ $(document).ready(function(){
     animateDiv('.messaging');
     animateDiv('.notifications');
     animateDiv('.account');
-});
+}
 
     function makeNewPosition(){
     

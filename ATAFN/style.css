@@ -27,7 +27,7 @@ hr{
     padding-top: 5px;
     padding-bottom: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     position: fixed;
     width: 100%;
     background-color: white;
@@ -39,10 +39,11 @@ hr{
     grid-gap: 10px;
     padding-top: 0;
     padding-bottom: 10px;
+    z-index: 10000;
 }
 #main-icon img{
-  height: 50%;
-  width: 50%;
+  height: 45%;
+  width: 45%;
   object-fit: contain;
   padding: 0;
 }
@@ -61,86 +62,106 @@ hr{
   align-items: center;
 }
 
-#main-icon:hover{
-    background-color: gray;
-    opacity: 20%;
-    border-radius: 10px;
-    z-index: 100;
+
+
+
+/* logo flex */
+
+.logo{
+  width: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  top: 7px;
 }
 
-.logo{ 
-    grid-column-start: 1;
-    grid-column-end: 2;
+.logo-search{
+  grid-column-start: 1;
+  grid-column-end: 6;
 }
-.logo img{
-  width: 100%;
-  padding-left: 7%;
-  object-fit: contain;
-  padding: 0;
+.logo-search-flex{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
-.search{
-    grid-column-start: 2;
-    grid-column-end: 4;
+.search img{
+  padding-right: 1%;
 }
 .search button{
   text-decoration: none;
   background-color: rgb(233, 233, 233);
   color: rgb(120, 120, 120);
-  padding: 10px;
+  padding: 8px;
   border: none;
   font-family: Body;
-  width: 250px;
+  width: 100%;
   border-radius: 30px;
   text-align: left;
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 13.5%;
+  left: 14%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  font-size: .7rem;
+  padding-right: 40%;
 }
 
 .main-icon{
   grid-column-start: 7;
-  grid-column-end: 15;
+  grid-column-end: 16;
 }
 .main-icon-flex{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
+#main-icon:hover{
+  background-color: gray;
+  opacity: 20%;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.search, .home, .watch, .marketplace, .groups, .gaming, .create, .messaging, .notifications, .account, .logo, .center {
+  position: relative;
+}
+
+
+/* profile flex */
 
 .profile-grid{
-    grid-column-start: 16;
-    grid-column-end: 17;
+    grid-column-start: 19;
+    grid-column-end: 22;
 }
-.profile-grid img{
-  width: 100%;
+.profile-flex img{
+  width: 90%;
+}
+.name img{
+  width: 180%;
+  padding-right: 50%;
+}
+.profile-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .create{
-    grid-column-start: 17;
-    grid-column-end: 18;
+  width: 50px;
 }
-.messaging{
-    grid-column-start: 18;
-    grid-column-end: 19;
+
+.name{
+  width: 50px;
 }
-.notifications{
-    grid-column-start: 19;
-    grid-column-end: 20;
-}
-.account{
-    grid-column-start: 20;
-    grid-column-end: 21;
+
+.create, .messaging, .notifications, .account{
+  padding: 100px;
 }
 
 
-/* start */
+/* spacer */
 .space{
     height: 10vh;
-    position: srelative;
-    width: 100%;
+    position: relative;
 }
 
 /* post flex */
@@ -162,6 +183,8 @@ hr{
     align-items: flex-start;
     width: 95%;
     align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
   }
   .author-photo{
     width: 10%;
@@ -176,6 +199,14 @@ hr{
     font-size: 0.8rem;
     color: gray;
     font-family: Body;
+  }
+  .author-name a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .author-name span:hover{
+    text-decoration: underline;
+    cursor: pointer;
   }
 .text{
     width: 95%;
@@ -204,9 +235,18 @@ hr{
   font-size: .9rem;
   color: gray;
 }
+<<<<<<< Updated upstream
 .comment_block{
   grid-column: auto;
   grid-row: auto;
+=======
+.data-grid a:hover{
+  text-decoration: underline;
+}
+.data:hover{
+  text-decoration: underline;
+  cursor: pointer;
+>>>>>>> Stashed changes
 }
 
 /* image */
@@ -219,9 +259,11 @@ hr{
 .reactions-grid{
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-template-rows: 30px;
     padding-top: 4%;
     padding-bottom: 4%;
-    grid-gap: 200px;
+    grid-gap: 10px;
+    width: 75%;
 }
 
 .reactions-grid div:hover{
@@ -233,7 +275,7 @@ hr{
     grid-column-start: 1;
     grid-column-end: 2;
 }
-.comment_block{
+.comment-block{
     grid-column-start: 2;
     grid-column-end: 3;
 }
