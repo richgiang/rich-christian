@@ -235,24 +235,22 @@ hr{
   font-size: .9rem;
   color: gray;
 }
-<<<<<<< Updated upstream
+.reactions:hover, .data:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .comment_block{
   grid-column: auto;
   grid-row: auto;
-=======
-.data-grid a:hover{
-  text-decoration: underline;
-}
-.data:hover{
-  text-decoration: underline;
-  cursor: pointer;
->>>>>>> Stashed changes
 }
 
 /* image */
 .image{
     align-self: center;
     width: 95%;
+    padding-top: 5%;
+    padding-bottom: 1%;
 }
 
 /* reactions */
