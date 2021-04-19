@@ -204,6 +204,10 @@ hr{
   font-size: .9rem;
   color: gray;
 }
+.comment_block{
+  grid-column: auto;
+  grid-row: auto;
+}
 
 /* image */
 .image{
@@ -405,7 +409,7 @@ body {
   width: 65px;
   height: 65px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: auto;
 }
 .user_avatar img {
   width: 100%;
@@ -414,9 +418,9 @@ body {
 }
 
 .comment_block {
-  width: 65%;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 0px;
   padding: 10px;
 }
 .comment_block .create_new_comment {
@@ -425,7 +429,7 @@ body {
 }
 .comment_block .create_new_comment .input_comment {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align:  middle;
   margin-left: 10px;
   width: calc(100% - 75px);
 }
@@ -456,7 +460,7 @@ body {
   vertical-align: middle;
   width: calc(100% - 75px);
   min-height: 65px;
-  margin-left: 10px;
+  margin-left: 2px;
   padding: 5px 10px;
   font-size: 0.9rem;
   color: #555;
