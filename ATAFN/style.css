@@ -112,27 +112,27 @@ hr{
 
 
 .profile-grid{
-    grid-column-start: 15;
-    grid-column-end: 16;
+    grid-column-start: 16;
+    grid-column-end: 17;
 }
 .profile-grid img{
   width: 100%;
 }
 .create{
-    grid-column-start: 16;
-    grid-column-end: 17;
-}
-.messaging{
     grid-column-start: 17;
     grid-column-end: 18;
 }
-.notifications{
+.messaging{
     grid-column-start: 18;
     grid-column-end: 19;
 }
-.account{
+.notifications{
     grid-column-start: 19;
     grid-column-end: 20;
+}
+.account{
+    grid-column-start: 20;
+    grid-column-end: 21;
 }
 
 
